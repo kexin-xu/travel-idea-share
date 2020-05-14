@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="_token" content="{{ csrf_token() }}">
+		<title></title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.datePicker.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/tinymce.min.js"></script>
+        
+        <link href="css/datePicker.css" rel="stylesheet" type="text/css" />
+        <link href="css/travel_css.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+        <section id="page">
+            <header>
+                <nav class="navbar navbar-fixed-top mnav" role="navigation">
+                    <div class="container-fluid contain-nav">
+                        <div class="navbar-header">
+                                <a class="navbar-brand-my" href="#">Travel-Ideas</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav nav-my">
+                                <li class="active-my"><a href="#">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="Ideas.html">Ideas</a></li>
+                                <li><a href="booking.html">Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in li-span"></span>Login</a></li>
+                                    <li class="personal-page">
+										<a href="#">
+											<span class="glyphicon glyphicon-user li-span"></span>
+											personal-page
+											<b class="caret"></b>
+										</a>
+										<ul class="add-menu">
+										    <li><a href="personal-home.html">My Ideas</a></li>
+										    <li><a href="booking-order.html">My booking</a></li>
+										</ul>
+									</li>
+                                     <!-- <li><a href="#"><span class="glyphicon glyphicon-user li-span"></span>Hello！</a></li> -->
+                                     <!-- <li>
+
+                						 <a href="#"
+                						    onclick="event.preventDefault();
+                						                  document.getElementById('logout-form').submit();">
+                						     <span class="glyphicon glyphicon-log-out li-span"></span>{{ __('Logout') }}
+                						 </a>
+
+                						 <form id="logout-form" action="#" method="POST" style="display: none;">
+                						     @csrf
+                						 </form>
+                					 </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </header>
+            <div class="main-content">
+                <div class="index-img">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                        <!-- carousel -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- carousel-img -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/background7.jpg" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <img src="images/background2.jpg" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <img src="images/background1.png" alt="Third slide">
+                            </div>
+                        </div>
+                        <!-- carousel-nav-->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                            <span>&lsaquo;</span>
+                         </a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                            <span>&rsaquo;</span>
+                        </a>
+                    </div>
+                    <div class="search-box-box">
+                        <div class="search-box-inside-box">
+                            <p>Share Ideas, Sare life</p>
+                            <input type="text" class="form-controller" id="search" name="search">
+                            <button type="button" class="btn btn-sm">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-ideas">
+                    <div class="index-ideas-box">
+                        <h1>Latest travel plans</h1>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center ideas-box-inside">
+                            <div class="list-group list-group-horizontal">
+                                <a href="Idea-info.html" class="list-group-item ideas-latest" target="view_window">
+                                    <div class="ideas-box-left">
+                                        <span>01</span>
+                                        <span>2020-04</span>
+                                    </div>
+                                    <div class="ideas-box-right">
+                                        <p>Hongkong 7 days trip plan </p>
+                                        <p>
+                                            <span>Start Date: </span><span>2020-10-01</span>
+                                        </p>
+                                        <p>
+                                            <span>End Date: </span><span>2020-10-08</span>
+                                        </p>
+                                        <p>
+                                            <span>Destination: </span><span>HongKong</span>
+                                        </p>
+                                    </div>
+									<div class="ideas-box-bottom">
+										<div class="ideas-bottom-left">
+											<p>
+												<span class="glyphicon glyphicon-tags"></span>
+												<span>Tags: </span>
+												<span>HongKong, Food</span>
+										    </p>
+										</div>
+										<div class="ideas-bottom-right">
+											<p><i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span></p>
+										</div>
+										
+									</div>
+                                </a>
+                                <a href="Idea-info.html" class="list-group-item" target="view_window">
+                                    <div class="ideas-box-left">
+                                        <span>01</span>
+                                        <span>2020-04</span>
+                                    </div>
+                                    <div class="ideas-box-right">
+                                        <p>Hongkong 7 days trip  </p>
+                                        <p>
+                                            <span>Start Date: </span><span>2020-10-01</span>
+                                        </p>
+                                        <p>
+                                            <span>End Date: </span><span>2020-10-08</span>
+                                        </p>
+                                        <p>
+                                            <span>Destination: </span><span>HongKong</span>
+                                        </p>
+                                    </div>
+									<div class="ideas-box-bottom">
+										<div class="ideas-bottom-left">
+											<p>
+												<span class="glyphicon glyphicon-tags"></span>
+												<span>Tags: </span>
+												<span>HongKong, Food</span>
+										    </p>
+										</div>
+										<div class="ideas-bottom-right">
+											<p><i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span></p>
+										</div>
+										
+									</div>
+                                </a>
+                                <a href="Idea-info.html" class="list-group-item" target="view_window">
+                                    <div class="ideas-box-left">
+                                        <span>01</span>
+                                        <span>2020-04</span>
+                                    </div>
+                                    <div class="ideas-box-right">
+                                        <p>Hongkong 7 days trip plan </p>
+                                        <p>
+                                            <span>Start Date: </span><span>2020-10-01</span>
+                                        </p>
+                                        <p>
+                                            <span>End Date: </span><span>2020-10-08</span>
+                                        </p>
+                                        <p>
+                                            <span>Destination: </span><span>HongKong</span>
+                                        </p>
+                                    </div>
+									<div class="ideas-box-bottom">
+										<div class="ideas-bottom-left">
+											<p>
+												<span class="glyphicon glyphicon-tags"></span>
+												<span>Tags: </span>
+												<span>HongKong, Food</span>
+										    </p>
+										</div>
+										<div class="ideas-bottom-right">
+											<p><i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span></p>
+										</div>
+									</div>
+                                </a>
+                                <a href="Idea-info.html" class="list-group-item" target="view_window">
+                                   <div class="ideas-box-left">
+                                       <span>01</span>
+                                       <span>2020-04</span>
+                                   </div>
+                                   <div class="ideas-box-right">
+                                       <p>Hongkong 7 days trip plan </p>
+                                       <p>
+                                           <span>Start Date: </span><span>2020-10-01</span>
+                                       </p>
+                                       <p>
+                                           <span>End Date: </span><span>2020-10-08</span>
+                                       </p>
+                                       <p>
+                                           <span>Destination: </span><span>HongKong</span>
+                                       </p>
+                                   </div>
+								   <div class="ideas-box-bottom">
+										<div class="ideas-bottom-left">
+											<p>
+												<span class="glyphicon glyphicon-tags"></span>
+												<span>Tags: </span>
+												<span>HongKong, Food</span>
+											</p>
+										</div>
+										<div class="ideas-bottom-right">
+											<p><i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span></p>
+										</div>
+								   </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ideas-button">
+                            <a href="Ideas.html" >
+                                <button class="btn btn-my" type="submit">More</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-about">
+                    <div class="index-about-inside">
+                        <h1>Servicce Provide</h1>
+                        <div class="index-about-module">
+                            <div class="module">
+                                <p>
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    <span>Searching Plans</span>
+                                </p>
+                                <p>
+                                    You can upload your travel plan then others will give you some advice about your trip.
+                                    Also you can search others plan and see its comments.
+                                </p>
+                            </div>
+                            <div class="module">
+                                <p>
+                                    <span class="glyphicon glyphicon-file"> </span>
+                                    <span>Booking Hotel</span>
+                                </p>
+                                <p>
+                                    You can booking hotel though the website. We will also givve you some recomendation about the hotel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-booking">
+                    <div class="booking-head">
+                        <p>
+                            <span>How to make A booking ?</span>
+                            <span><small>Click <a href="booking.html">here</a> to have a try.</small></span>
+                        </p>
+                        <div class="booking-body">
+                            <a href="#">
+                                <div class="booking-card">
+                                    <span>01</span>
+                                    <p>
+                                        <span>Search hotel base on your destination.</span>
+                                        <span><small>You can view hotel recommendations based on your plan.</small></span>
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="booking-card">
+                                    <span>02</span>
+                                    <p>
+                                        <span>Choose a hotel.</span>
+                                        <span><small>We will give you some recommendations about the hotels.</small></span>
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="booking-card">
+                                    <span>03</span>
+                                    <p>
+                                        <span>Click and make a booking.</span>
+                                        <span><small>Submit your personal information to make a booking.</small></span>
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="booking-card">
+                                    <span>04</span>
+                                    <p>
+                                        <span>You can check your book order in your personal center.</span>
+                                        <span><small>You can canccel or modify your order before the date you check in.</small></span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-bottom">
+                    <p>
+                        <a href="">About us</a>-
+                        <a href="">Cooperation</a>-
+                        <a href="">Suggestion</a>-
+                        <a href="">Contact us</a>
+                    </p>
+                    <p>Copyright 2020 Travel Ideas</p>
+                </div>
+            </footer>
+        </section>
+	</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="_token" content="{{ csrf_token() }}">
+		<title></title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.datePicker.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/tinymce.min.js"></script>
+        
+        <link href="css/datePicker.css" rel="stylesheet" type="text/css" />
+        <link href="css/travel_css.css" rel="stylesheet" type="text/css" />
+        
+		<script>
+		$(document).ready(function(){
+			$( function() {
+			    $( "#datepicker" ).datepicker();
+				$( "#datepicker-to" ).datepicker();
+				$( "#datepicker" ).datepicker( "option", "showAnim", "clip");
+				$( "#datepicker-to" ).datepicker( "option", "showAnim", "clip");
+				$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+				$( "#datepicker-to" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+			  } );
+			});
+		</script>
+	</head>
+	<body>
+        <section id="page">
+            <header>
+                <nav class="navbar navbar-fixed-top mnav" role="navigation">
+                    <div class="container-fluid contain-nav">
+                        <div class="navbar-header">
+                                <a class="navbar-brand-my" href="index.html">Travel-Ideas</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav nav-my">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="Ideas.html">Ideas</a></li>
+                                <li  class="active-my"><a href="booking.html">Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in li-span"></span>Login</a></li>
+                                    <li class="personal-page">
+                                    	<a href="personal-home.html">
+                                    		<span class="glyphicon glyphicon-user li-span"></span>
+                                    		personal-page
+                                    		<b class="caret"></b>
+                                    	</a>
+                                    	<ul class="add-menu">
+                                    	    <li><a href="personal-home.html">My Ideas</a></li>
+                                    	    <li><a href="booking-order.html">My booking</a></li>
+                                    	</ul>
+                                    </li>
+                                     <!-- <li><a href="#"><span class="glyphicon glyphicon-user li-span"></span>Hello！</a></li> -->
+                                     <!-- <li>
+
+                						 <a href="#"
+                						    onclick="event.preventDefault();
+                						                  document.getElementById('logout-form').submit();">
+                						     <span class="glyphicon glyphicon-log-out li-span"></span>{{ __('Logout') }}
+                						 </a>
+
+                						 <form id="logout-form" action="#" method="POST" style="display: none;">
+                						     @csrf
+                						 </form>
+                					 </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </header>
+            <div class="main-content">
+                <div class="header-banner">
+					<img src="images/background9.jpg" alt="">
+					<p>Hotel Booking</p>
+					<div class="search-box-box search-box-special">
+					    <div class="search-box-inside-box booking-search">
+							<input type="text" id="datepicker" class="input-icon caret" placeholder="Checkin Date">
+							<input type="text" id="datepicker-to" class="input-icon caret" placeholder="Checkout Date">
+							<input type="text" class="form-controller" id="search-tags" name="search" placeholder="Destination/Key words">
+							<button type="button" class="btn btn-sm">
+							    <span class="glyphicon glyphicon-search"></span> Search
+							</button>
+					    </div>
+					</div>
+				</div>
+				<div class="booking-content">
+					<div class="booking-list">
+						<div class="booking-item">
+							<img src="images/room.jpg" alt="">
+							<div class="item-info">
+								<h4>HongKong Average Hotel</h4>
+								<div class="small-info">
+									<span>HongKong,Sai Wan</span>
+									<span><i class="fa fa-user"></i>2</span>
+								</div>
+								<p><span>HKD$600</span><span>/NIGHT</span></p>
+								<div class="item-but">
+									<a href="booking-create.html" target="view_window">
+										
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="booking-item">
+							<img src="images/room.jpg" alt="">
+							<div class="item-info">
+								<h4>HongKong Average Hotel</h4>
+								<div class="small-info">
+									<span>HongKong,Sai Wan</span>
+									<span><i class="fa fa-user"></i>2</span>
+								</div>
+								<p><span>HKD$600</span><span>/NIGHT</span></p>
+								<div class="item-but">
+									<a href="booking-create.html" target="view_window">
+										
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="booking-item">
+							<img src="images/room.jpg" alt="">
+							<div class="item-info">
+								<h4>HongKong Average Hotel</h4>
+								<div class="small-info">
+									<span>HongKong,Sai Wan</span>
+									<span><i class="fa fa-user"></i>2</span>
+								</div>
+								<p><span>HKD$600</span><span>/NIGHT</span></p>
+								<div class="item-but">
+									<a href="booking-create.html" target="view_window">
+										
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="booking-item">
+							<img src="images/room.jpg" alt="">
+							<div class="item-info">
+								<h4>HongKong Average Hotel</h4>
+								<div class="small-info">
+									<span>HongKong,Sai Wan</span>
+									<span><i class="fa fa-user"></i>2</span>
+								</div>
+								<p><span>HKD$600</span><span>/NIGHT</span></p>
+								<div class="item-but">
+									<a href="booking-create.html" target="view_window">
+										
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="booking-item">
+							<img src="images/room.jpg" alt="">
+							<div class="item-info">
+								<h4>HongKong Average Hotel</h4>
+								<div class="small-info">
+									<span>HongKong,Sai Wan</span>
+									<span><i class="fa fa-user"></i>2</span>
+								</div>
+								<p><span>HKD$600</span><span>/NIGHT</span></p>
+								<div class="item-but">
+									<a href="booking-create.html" target="view_window">
+										
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="booking-item">
+							<img src="images/room.jpg" alt="">
+							<div class="item-info">
+								<h4>HongKong Average Hotel</h4>
+								<div class="small-info">
+									<span>HongKong,Sai Wan</span>
+									<span><i class="fa fa-user"></i>2</span>
+								</div>
+								<p><span>HKD$600</span><span>/NIGHT</span></p>
+								<div class="item-but">
+									<a href="booking-create.html" target="view_window">
+										
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+            <footer>
+                <div class="footer-bottom">
+                    <p>
+                        <a href="">About us</a>-
+                        <a href="">Cooperation</a>-
+                        <a href="">Suggestion</a>-
+                        <a href="">Contact us</a>
+                    </p>
+                    <p>Copyright 2020 Travel Ideas</p>
+                </div>
+            </footer>
+        </section>
+	</body>
+</html>

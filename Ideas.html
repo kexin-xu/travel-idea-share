@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="_token" content="{{ csrf_token() }}">
+		<title></title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.datePicker.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/tinymce.min.js"></script>
+        
+        <link href="css/datePicker.css" rel="stylesheet" type="text/css" />
+        <link href="css/travel_css.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+        <section id="page">
+            <header>
+                <nav class="navbar navbar-fixed-top mnav" role="navigation">
+                    <div class="container-fluid contain-nav">
+                        <div class="navbar-header">
+                                <a class="navbar-brand-my" href="index.html">Travel-Ideas</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav nav-my">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li class="active-my"><a href="Ideas.html">Ideas</a></li>
+                                <li><a href="booking.html">Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in li-span"></span>Login</a></li>
+                                    <li class="personal-page">
+                                    	<a href="personal-home.html">
+                                    		<span class="glyphicon glyphicon-user li-span"></span>
+                                    		personal-page
+                                    		<b class="caret"></b>
+                                    	</a>
+                                    	<ul class="add-menu">
+                                    	    <li><a href="personal-home.html">My Ideas</a></li>
+                                    	    <li><a href="booking-order.html">My booking</a></li>
+                                    	</ul>
+                                    </li>
+                                     <!-- <li><a href="#"><span class="glyphicon glyphicon-user li-span"></span>Hello！</a></li> -->
+                                     <!-- <li>
+
+                						 <a href="#"
+                						    onclick="event.preventDefault();
+                						                  document.getElementById('logout-form').submit();">
+                						     <span class="glyphicon glyphicon-log-out li-span"></span>{{ __('Logout') }}
+                						 </a>
+
+                						 <form id="logout-form" action="#" method="POST" style="display: none;">
+                						     @csrf
+                						 </form>
+                					 </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </header>
+            <div class="main-content">
+                <div class="header-banner">
+					<img src="images/trip2.png" alt="">
+					<p>Travel Ideas</p>
+					<div class="search-box-box search-box-special">
+					    <div class="search-box-inside-box">
+							<ul id="myTab" class="nav nav-tabs search-tab">
+								<li>
+									<a href="#all" data-toggle="tab">All</a>
+								</li>
+								<li  class="active"><a href="#destin" data-toggle="tab">Destination</a></li>
+								<li><a href="#tags" data-toggle="tab">Tags</a></li>
+							</ul>
+							<div id="myTabContent" class="tab-content">
+								<div class="tab-pane active" id="all">
+									<input type="text" class="form-controller" id="search-all" name="search">
+									<button type="button" class="btn btn-sm">
+									    <span class="glyphicon glyphicon-search"></span> Search
+									</button>
+								</div>
+								<div class="tab-pane" id="destin">
+									<input type="text" class="form-controller" id="search-destination" name="search">
+									<button type="button" class="btn btn-sm">
+									    <span class="glyphicon glyphicon-search"></span> Search
+									</button>
+								</div>
+								<div class="tab-pane" id="tags">
+									<input type="text" class="form-controller" id="search-tags" name="search">
+									<button type="button" class="btn btn-sm">
+									    <span class="glyphicon glyphicon-search"></span> Search
+									</button>
+								</div>
+							</div>
+					    </div>
+					</div>
+				</div>
+				<div class="ideas-list-box">
+					<p class="reasult-count">
+						<i class="fa fa-angle-double-right"></i>
+						Total results: 
+						<span>40</span>
+						<i class="fa fa-play fa-flip-horizontal leftmark"></i>
+					</p>
+					<div class="list-group ideas-list">
+						<a href="Idea-info.html" class="list-group-item ideas-list-content" target="view_window">
+							<div class="list-left">
+								<span>23</span>
+								<span>2020-03</span>
+							</div>
+							<div class="list-right">
+								<p class="list-title">
+									<span>Hongkong 7 days trip plan.</span> 
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Destination: </span>
+									<span>Hongkong</span>
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Travel Time: </span>
+									<span>2020-10-10</span>
+									<span>to</span>
+									<span>2020-10-30</span>
+								</p>
+								<p class="last-bottom">
+									<span class="glyphicon glyphicon-tags"></span>
+									<span>Tags: </span>
+									<span>HongKong, Food</span>
+									<i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span>
+								</p>
+							</div>
+							<div class="more-details">
+								<p><span>More Details</span></p>
+							</div>
+						</a>
+						<a href="Idea-info.html" class="list-group-item ideas-list-content" target="view_window">
+							<div class="list-left">
+								<span>30</span>
+								<span>2020-03</span>
+							</div>
+							<div class="list-right">
+								<p class="list-title">
+									<span>Hongkong 7 days trip plan.</span> 
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Destination: </span>
+									<span>Hongkong</span>
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Travel Time: </span>
+									<span>2020-10-10</span>
+									<span>to</span>
+									<span>2020-10-30</span>
+								</p>
+								<p class="last-bottom">
+									<span class="glyphicon glyphicon-tags"></span>
+									<span>Tags: </span>
+									<span>HongKong, Food</span>
+									<i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span>
+								</p>
+							</div>
+							<div class="more-details">
+								<p><span>More Details</span></p>
+							</div>
+						</a>
+						<a href="Idea-info.html" class="list-group-item ideas-list-content" target="view_window">
+							<div class="list-left">
+								<span>15</span>
+								<span>2020-04</span>
+							</div>
+							<div class="list-right">
+								<p class="list-title">
+									<span>Hongkong 7 days trip plan.</span> 
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Destination: </span>
+									<span>Hongkong</span>
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Travel Time: </span>
+									<span>2020-10-10</span>
+									<span>to</span>
+									<span>2020-10-30</span>
+								</p>
+								<p class="last-bottom">
+									<span class="glyphicon glyphicon-tags"></span>
+									<span>Tags: </span>
+									<span>HongKong, Food</span>
+									<i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span>
+								</p>
+							</div>
+							<div class="more-details">
+								<p><span>More Details</span></p>
+							</div>
+						</a>
+						<a href="Idea-info.html" class="list-group-item ideas-list-content" target="view_window">
+							<div class="list-left">
+								<span>04</span>
+								<span>2020-04</span>
+							</div>
+							<div class="list-right">
+								<p class="list-title">
+									<span>Hongkong 7 days trip plan.</span> 
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Destination: </span>
+									<span>Hongkong</span>
+								</p>
+								<p>
+									<i class="fa fa-circle"></i>
+									<span>Travel Time: </span>
+									<span>2020-10-10</span>
+									<span>to</span>
+									<span>2020-10-30</span>
+								</p>
+								<p class="last-bottom">
+									<span class="glyphicon glyphicon-tags"></span>
+									<span>Tags: </span>
+									<span>HongKong, Food</span>
+									<i class="fa fa-commenting-o fa-flip-horizontal"></i><span>10</span>
+								</p>
+							</div>
+							<div class="more-details">
+								<p><span>More Details</span></p>
+							</div>
+						</a>
+					</div>
+				</div>
+            </div>
+            <footer>
+                <div class="footer-bottom">
+                    <p>
+                        <a href="">About us</a>-
+                        <a href="">Cooperation</a>-
+                        <a href="">Suggestion</a>-
+                        <a href="">Contact us</a>
+                    </p>
+                    <p>Copyright 2020 Travel Ideas</p>
+                </div>
+            </footer>
+        </section>
+	</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="_token" content="{{ csrf_token() }}">
+		<title></title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.datePicker.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/tinymce.min.js"></script>
+        
+        <link href="css/datePicker.css" rel="stylesheet" type="text/css" />
+        <link href="css/travel_css.css" rel="stylesheet" type="text/css" />
+		<script>
+		$(document).ready(function(){
+		  $(".ideas-list-content").hover(
+			function(){
+				 $(this).stop().find("#personal-action").fadeOut("fast");
+				 $(this).stop().find(".but-list").fadeIn("slow");
+			},
+			function() {
+				$(this).stop().find("#personal-action").fadeIn("slow");
+				$(this).stop().find(".but-list").fadeOut("fast");
+			})
+		$( function() {
+		    $( "#strat-date" ).datepicker();
+			$( "#end-date" ).datepicker();
+			$( "#strat-date" ).datepicker( "option", "showAnim", "clip");
+			$( "#end-date" ).datepicker( "option", "showAnim", "clip");
+			$( "#strat-date" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+			$( "#end-date" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		  } );
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+		    $( ".start_date" ).datepicker({
+		        dateFormat: 'yy-mm-dd',
+		    });
+		    $( ".end_date" ).datepicker({
+		        dateFormat: 'yy-mm-dd',
+		    });
+		
+		    tinyMCE.init({
+		        selector: ".tinyMCE_textarea",
+		        theme: "modern",
+		        // object_resizing: false,
+		        // relative_urls: false,
+		        // remove_script_host: false,
+		
+		        // allow_script_urls: true,
+		        // extended_valid_elements: 'span,script[language|type|src]',
+		        // browser_spellcheck: true,
+		        // force_br_newlines: true,
+		        // force_p_newlines: false,
+		        // forced_root_block: '',
+		
+		        paste_as_text: true,
+		        browser_spellcheck: true,
+		       
+		        plugins: ["code", "textcolor", "advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table", "image"],
+		        toolbar: "codesample | code | fontselect | fontsizeselect | forecolor backcolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+		        content_css: [
+		            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+		            '//www.tiny.cloud/css/codepen.min.css'
+		        ],
+		        valid_elements : '*[*]',
+		        height: 300,
+		        // formats: {
+		        //     alignleft: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'left' },
+		        //     aligncenter: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'center' },
+		        //     alignright: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'right' },
+		        //     alignfull: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'full' },
+		        //     bold: { inline: 'span', classes: 'bold' },
+		        //     italic: { inline: 'span', classes: 'italic' },
+		        //     underline: { inline: 'span', classes: 'underline', exact: true },
+		        //     strikethrough: { inline: 'del' },
+		        //     customformat: { inline: 'span', styles: { color: '#00ff00', fontSize: '20px' }, attributes: { title: 'My custom format'} , classes: 'example1'}
+		        // },
+		        // style_formats: [
+		        //     { title: 'Custom format', format: 'customformat' },
+		        //     { title: 'Align left', format: 'alignleft' },
+		        //     { title: 'Align center', format: 'aligncenter' },
+		        //     { title: 'Align right', format: 'alignright' },
+		        //     { title: 'Align full', format: 'alignfull' },
+		        //     { title: 'Bold text', inline: 'strong' },
+		        //     { title: 'Red text', inline: 'span', styles: { color: '#ff0000' } },
+		        //     { title: 'Red header', block: 'h1', styles: { color: '#ff0000' } },
+		        //     { title: 'Badge', inline: 'span', styles: { display: 'inline-block', border: '1px solid #2276d2', 'border-radius': '5px', padding: '2px 5px', margin: '0 2px', color: '#2276d2' } },
+		        //     { title: 'Table row 1', selector: 'tr', classes: 'tablerow1' },
+		        //     { title: 'Image formats' },
+		        //     { title: 'Image Left', selector: 'img', styles: { 'float': 'left', 'margin': '0 10px 0 10px' } },
+		        //     { title: 'Image Right', selector: 'img', styles: { 'float': 'right', 'margin': '0 0 10px 10px' } },
+		        // ]
+		        /* enable title field in the Image dialog*/
+		        image_title: true,
+		        /* enable automatic uploads of images represented by blob or data URIs*/
+		        automatic_uploads: true,
+		        /*
+		            URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+		            images_upload_url: 'postAcceptor.php',
+		            here we add custom filepicker only to Image dialog
+		        */
+		        file_picker_types: 'image',
+		        /* and here's our custom image picker*/
+		        file_picker_callback: function (cb, value, meta) {
+		            var input = document.createElement('input');
+		            input.setAttribute('type', 'file');
+		            input.setAttribute('accept', 'image/*');
+		
+		            /*
+		            Note: In modern browsers input[type="file"] is functional without
+		            even adding it to the DOM, but that might not be the case in some older
+		            or quirky browsers like IE, so you might want to add it to the DOM
+		            just in case, and visually hide it. And do not forget do remove it
+		            once you do not need it anymore.
+		            */
+		
+		            input.onchange = function () {
+		            var file = this.files[0];
+		
+		            var reader = new FileReader();
+		            reader.onload = function () {
+		                /*
+		                Note: Now we need to register the blob in TinyMCEs image blob
+		                registry. In the next release this part hopefully won't be
+		                necessary, as we are looking to handle it internally.
+		                */
+		                var id = 'blobid' + (new Date()).getTime();
+		                var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+		                var base64 = reader.result.split(',')[1];
+		                var blobInfo = blobCache.create(id, file, base64);
+		                blobCache.add(blobInfo);
+		
+		                /* call the callback and populate the Title field with the file name */
+		                cb(blobInfo.blobUri(), { title: file.name });
+		            };
+		            reader.readAsDataURL(file);
+		            };
+		
+		            input.click();
+		        }
+		    });
+		
+		});
+		
+		</script>
+	</head>
+	<body>
+        <section id="page">
+            <header>
+                <nav class="navbar navbar-fixed-top mnav" role="navigation">
+                    <div class="container-fluid contain-nav">
+                        <div class="navbar-header">
+                                <a class="navbar-brand-my" href="index.html">Travel-Ideas</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav nav-my">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li class="active-my"><a href="Ideas.html">Ideas</a></li>
+                                <li><a href="booking.html">Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in li-span"></span>Login</a></li>
+                                    <li class="personal-page">
+                                    	<a href="personal-home.html">
+                                    		<span class="glyphicon glyphicon-user li-span"></span>
+                                    		personal-page
+                                    		<b class="caret"></b>
+                                    	</a>
+                                    	<ul class="add-menu">
+                                    	    <li><a href="personal-home.html">My Ideas</a></li>
+                                    	    <li><a href="booking-order.html">My booking</a></li>
+                                    	</ul>
+                                    </li>
+                                     <!-- <li><a href="#"><span class="glyphicon glyphicon-user li-span"></span>Hello！</a></li> -->
+                                     <!-- <li>
+
+                						 <a href="#"
+                						    onclick="event.preventDefault();
+                						                  document.getElementById('logout-form').submit();">
+                						     <span class="glyphicon glyphicon-log-out li-span"></span>{{ __('Logout') }}
+                						 </a>
+
+                						 <form id="logout-form" action="#" method="POST" style="display: none;">
+                						     @csrf
+                						 </form>
+                					 </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="main-content">
+                <div class="header-banner">
+					<img src="images/o1.jpg" alt="">
+					<div class="per-img">
+						<img src="images/per4.jpg" alt="">
+					</div>
+					<h2>Hello, Welcome to your personal home page.</h2>
+					
+				</div>
+				<div class="content-1">
+					<div class="content-create">
+						<p class="reasult-count">
+							<i class="fa fa-angle-double-right"></i>
+							Create a New Idea
+							<i class="fa fa-play fa-flip-horizontal leftmark"></i>
+						</p>
+					</div>
+					<div class="card-holder">
+						<div class="card-wrapper">
+							<a href="#">
+								<div class="card bg-01" style="padding: 16px 64px 16px 10px;">
+									<span class="card-content"> Nav · Navigation</span>
+								</div>
+							</a>
+						</div>
+						<div class="card-wrapper">
+							<a href="personal-home.html">
+								<div class="card bg-02">
+									<span class="card-content">My Ideas</span>
+								</div>
+							</a>
+						</div>
+						<div class="card-wrapper">
+							<a href="booking-order.html">
+								<div class="card bg-06">
+									<span class="card-content">My Booking</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="idea-create">
+					  <div class="card-body1">
+					      <form method="post" action="{{ route('book_requests.store') }}">
+					          <div class="form-group request-formgroup">
+					              <label for="title" class="request-label">Title</label>
+					              <input type="text" class="form-control request-form" name="title" placeholder="Idea Title"/>
+					          </div>
+					          <div class="form-group request-formgroup">
+					              <label for="destination" class="request-label">Destination</label>
+					              <input type="text" class="form-control request-form" name="destination" placeholder="Trip Destination"/>
+					          </div>
+					          <div class="form-group request-formgroup">
+					              <label for="strat-date" class="request-label">Start Date</label>
+					              <input type="text" id="strat-date" class="form-control request-form" name="strat-date" placeholder="Start Date"/>
+					          </div>
+					          <div class="form-group request-formgroup">
+					              <label for="end-date" class="request-label">End Date</label>
+					              <input type="text" id="end-date" class="form-control request-form" name="end-date" placeholder="End Date"/>
+					          </div>
+							  <div class="form-group request-formgroup">
+							      <label for="tags" class="request-label">Tags</label>
+							      <input type="text" class="form-control request-form" name="tags" placeholder="Trip Tags"/>
+							  </div>
+							  <div class="form-group request-formgroup">
+							      <label for="content" class="request-label">Content</label>
+								  <div class="request-form">
+									  <textarea class="form-control tinyMCE_textarea request-form"  name="content" placeholder="Enter Content"></textarea>
+								  </div>
+							  </div>
+					          <div class="form-group request-formgroup form-button">
+								  <button type="submit" class="btn sub-idea">Add</button>
+					              <a href="personal-home.html">
+					                  <button type="button" class="btn idea-reset">Cancel</button>
+					              </a>
+					          </div>
+					      </form>
+					  </div>
+					</div>
+				</div>
+            </div>
+            <footer>
+                <div class="footer-bottom">
+                    <p>
+                        <a href="">About us</a>-
+                        <a href="">Cooperation</a>-
+                        <a href="">Suggestion</a>-
+                        <a href="">Contact us</a>
+                    </p>
+                    <p>Copyright 2020 Travel Ideas</p>
+                </div>
+            </footer>
+        </section>
+	</body>
+</html>

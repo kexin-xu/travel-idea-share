@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="_token" content="{{ csrf_token() }}">
+		<title></title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/travel_css.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  $(".ideas-list-content").hover(
+			function(){
+				 $(this).stop().find("#personal-action").fadeOut("fast");
+				 $(this).stop().find(".but-list").fadeIn("slow");
+			},
+			function() {
+				$(this).stop().find("#personal-action").fadeIn("slow");
+				$(this).stop().find(".but-list").fadeOut("fast");
+			})
+			});
+		</script>
+	</head>
+	<body>
+        <section id="page">
+            <header>
+                <nav class="navbar navbar-fixed-top mnav" role="navigation">
+                    <div class="container-fluid contain-nav">
+                        <div class="navbar-header">
+                                <a class="navbar-brand-my" href="index.html">Travel-Ideas</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav nav-my">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li class="active-my"><a href="Ideas.html">Ideas</a></li>
+                                <li><a href="booking.html">Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in li-span"></span>Login</a></li>
+                                    <li class="personal-page">
+                                    	<a href="personal-home.html">
+                                    		<span class="glyphicon glyphicon-user li-span"></span>
+                                    		personal-page
+                                    		<b class="caret"></b>
+                                    	</a>
+                                    	<ul class="add-menu">
+                                    	    <li><a href="personal-home.html">My Ideas</a></li>
+                                    	    <li><a href="booking-order.html">My booking</a></li>
+                                    	</ul>
+                                    </li>
+                                     <!-- <li><a href="#"><span class="glyphicon glyphicon-user li-span"></span>Hello！</a></li> -->
+                                     <!-- <li>
+
+                						 <a href="#"
+                						    onclick="event.preventDefault();
+                						                  document.getElementById('logout-form').submit();">
+                						     <span class="glyphicon glyphicon-log-out li-span"></span>{{ __('Logout') }}
+                						 </a>
+
+                						 <form id="logout-form" action="#" method="POST" style="display: none;">
+                						     @csrf
+                						 </form>
+                					 </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="main-content">
+                <div class="header-banner">
+					<img src="images/trip2.jpg" alt="" class="idea-title">
+					<div class="per-img">
+						<img src="images/per3.jpg" alt="">
+					</div>
+					<h1 class="idea-info-title">Hongkong 7 days trip plan</h1>
+				</div>
+				<div class="content-1">
+					<div class="card-holder">
+						<div class="card-wrapper">
+							<a href="#">
+								<div class="card bg-01" style="padding: 16px 64px 16px 10px;">
+									<span class="card-content"> Nav · Navigation</span>
+								</div>
+							</a>
+						</div>
+						<div class="card-wrapper">
+							<a href="personal-home.html">
+								<div class="card bg-02">
+									<span class="card-content">My Ideas</span>
+								</div>
+							</a>
+						</div>
+						<div class="card-wrapper">
+							<a href="booking-order.html">
+								<div class="card bg-06">
+									<span class="card-content">My Booking</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="idea-content">
+						<div class="idea-head">
+							<span>Create by Username</span>
+							<span>2020-02-14 12:00:00</span>
+						</div>
+						<div class="idea-tags">
+							<div>
+								<div class="idea-tags-content">
+									<i class="fa fa-hourglass-start"></i><span>Start Time</span>
+									<span class="devide"> / </span><span>2019-11-03</span>
+								</div>
+								<div class="idea-tags-content">
+									<i class="fa fa-hourglass-end"></i><span>End Time</span>
+									<span class="devide"> / </span><span>2019-11-23</span>
+								</div>
+								<div class="idea-tags-content">
+									<i class="fa fa-sun-o"></i><span>Total Days</span>
+									<span class="devide"> / </span><span>10</span>
+								</div>
+							</div>
+							<div>
+								<div class="idea-tags-content">
+									<i class="fa fa-location-arrow"></i><span>Destination</span>
+									<span class="devide"> / </span><span>Hongkong</span>
+								</div>
+								<div class="idea-tags-content">
+									<i class="fa fa-users"></i><span>People</span>
+									<span class="devide"> / </span><span>4</span>
+								</div>
+							</div>
+							<div class="idea-tags-content">
+								<i class="fa fa-tags"></i><span>Trip Tags</span>
+								<span class="devide"> / </span><span>Hongkong, Food, Church</span>
+							</div>
+						</div>
+						<div class="idea-main-content">
+							<h2>Hongkong 7 days trip plan</h2>
+							<div class="content-idea">
+								<p>
+									HTML5 is a markup language used for structuring and presenting content on the World Wide Web.
+								</p>
+								<p>
+									HTML5 was the fifth and last major version of HTML that is a World Wide Web Consortium (W3C) recommendation. The current specification is known as the HTML Living Standard and is maintained by a consortium of the major browser vendors (Apple, Google, Mozilla, and Microsoft), the Web Hypertext Application Technology Working Group (WHATWG).
+								</p>
+								<p>
+									HTML5 includes detailed processing models to encourage more interoperable implementations; it extends, improves and rationalizes the markup available for documents, and introduces markup and application programming interfaces (APIs) for complex web applications.[6] For the same reasons, HTML5 is also a candidate for cross-platform mobile applications, because it includes features designed with low-powered devices in mind.
+								</p>
+								<p>
+									For a number of years, both groups then worked together. In 2011, however, the groups came to the conclusion that they had different goals: the W3C wanted to publish a "finished" version of "HTML5", while the WHATWG wanted to continue working on a Living Standard for HTML, continuously maintaining the specification rather than freezing it in a state with known problems, and adding new features as needed to evolve the platform.
+								</p>
+								<p>
+									Since then, the WHATWG has been working on this specification (amongst others), and the W3C has been copying fixes made by the WHATWG into their fork of the document (which also has other changes).
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="idea-location">
+					<h3>My Trip Routes</h3>
+					<div class="map-box">
+						map API
+					</div>
+				</div>
+				<div class="idea-comments">
+					<div class="comment-inside">
+						<div class="write-comment">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										Comments
+									</h3>
+								</div>
+								<div class="panel-body">
+									<textarea class="form-control" rows="5"></textarea>
+								</div>
+							</div>
+							<div class="comment-button">
+								<input type="submit" class="btn sub-com" value="Submit">
+								<input type="reset" class="btn sub-reset" value="Cancel">
+							</div>
+						</div>
+						<div class="com-count">
+							<p>Total Comments: <span>10</span></p>
+						</div>
+						<div class="comment-list">
+							<div class="comment-box">
+								<div class="head-icon">
+									<img src="images/pict1.jpg" >
+								</div>
+								<div class="com-content">
+									<div class="com-time">
+										<h4>Username</h4>
+										<span>2020-03-16 00:00</span>
+									</div>
+									<div class="com-main">
+										<p>
+											Since then, the WHATWG has been working on this specification (amongst others), and the W3C has been copying fixes made by the WHATWG into their fork of the document (which also has other changes).
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="comment-box">
+								<div class="head-icon">
+									<img src="images/pict2.jpg" >
+								</div>
+								<div class="com-content">
+									<div class="com-time">
+										<h4>Username</h4>
+										<span>2020-03-16 00:00</span>
+									</div>
+									<div class="com-main">
+										<p>
+											Since then, the WHATWG has been working on this specification (amongst others), and the W3C has been copying fixes made by the WHATWG into their fork of the document (which also has other changes).
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="comment-box">
+								<div class="head-icon">
+									<img src="images/pict1.jpg" >
+								</div>
+								<div class="com-content">
+									<div class="com-time">
+										<h4>Username</h4>
+										<span>2020-03-16 00:00</span>
+									</div>
+									<div class="com-main">
+										<p>
+											Since then, the WHATWG has been working on this specification (amongst others), and the W3C has been copying fixes made by the WHATWG into their fork of the document (which also has other changes).
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+            <footer>
+                <div class="footer-bottom">
+                    <p>
+                        <a href="">About us</a>-
+                        <a href="">Cooperation</a>-
+                        <a href="">Suggestion</a>-
+                        <a href="">Contact us</a>
+                    </p>
+                    <p>Copyright 2020 Travel Ideas</p>
+                </div>
+            </footer>
+        </section>
+	</body>
+</html>
