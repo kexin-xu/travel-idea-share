@@ -2,8 +2,6 @@
 A website for sharing travel idea. Similar to community blog.  It is only a front-end web design and implementation.   
 Chiness version of README.md, see [here]( [README-Chinese.md](README-Chinese.md) ) . (中文版README.md) 
 
-## catalogues
-
 ## Usage 
 
 **Download** [here](https://github.com/Kexin-ya/travel-idea-share/releases/tag/1.0) and open the index.html in your browser.  
