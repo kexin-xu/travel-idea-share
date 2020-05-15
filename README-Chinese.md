@@ -24,7 +24,7 @@ Bootstrap, jQuery
 
 网站的首页。
 
-![index page](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/localhost_8000_home (1).png)
+![index page](localhost_8000_home (1).png)
 
 
 
@@ -34,7 +34,7 @@ Bootstrap, jQuery
 
 可以根据不同的需求搜索你想要的攻略。
 
-![all travel idea page](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/localhost_8000_travel_ideas.png)
+![all travel idea page](localhost_8000_travel_ideas.png)
 
 
 
@@ -44,7 +44,7 @@ Bootstrap, jQuery
 
 可以根据入住和退房的时间以及目的地搜索酒店，点击酒店信息可以直接预定。
 
-![hotel select](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/booking.png)
+![hotel select](booking.png)
 
 
 
@@ -54,7 +54,7 @@ Bootstrap, jQuery
 
 "My trip route" 这个位置是用于放置一些地图类的API，底下有评论功能，可以对攻略进行评论和留言。
 
-![detailed idea](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/detailed-idea.png)
+![detailed idea](detailed-idea.png)
 
 
 
@@ -64,7 +64,7 @@ Bootstrap, jQuery
 
 页面可以管理自己发表的攻略。可以查看，删除，新增新的发表。
 
-![all personal travle idea](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/localhost_8000_travel_ideas_perallideashow_1.png)
+![all personal travle idea](localhost_8000_travel_ideas_perallideashow_1.png)
 
 
 
@@ -74,7 +74,7 @@ Bootstrap, jQuery
 
 可以管理自己的酒店订单。
 
-![peesonal-booking-order](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/peesonal-booking-order-9525058.png)
+![peesonal-booking-order](peesonal-booking-order-9525058.png)
 
 
 
@@ -82,11 +82,11 @@ Bootstrap, jQuery
 
 ------
 
-![idea create](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/idea-create.png)
+![idea create](idea-create.png)
 
 
 
-![book order create](/Applications/XAMPP/xamppfiles/htdocs/Travel-model/booking-order-create.png)
+![book order create](booking-order-create.png)
 
 
 
