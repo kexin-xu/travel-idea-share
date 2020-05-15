@@ -20,7 +20,7 @@ Bootstrap, jQuery
 
 -----
 
-![index page](localhost_8000_home (1).png)
+![index page](https://github.com/Kexin-ya/travel-idea-share/blob/master/localhost_8000_home%20(1).png)
 
 
 
