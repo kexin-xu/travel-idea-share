@@ -1,7 +1,7 @@
 # Travel's idea-share webiste（旅游攻略分享）
 
 一个用于分享旅游攻略或者查找旅游攻略的网站，这个网站还兼具了酒店搜索和预定功能。这是一个纯前端的简单的页面设计和实现。这个网站有点类似于社区博客，可以评论，发表管理自己的发表。   
-英文版的README: Enlish version of README.md, see [here]( [README.md](README.md) ) . 
+英文版的README: Enlish version of README.md, see [here](https://github.com/Kexin-ya/travel-idea-share) . 
 
 ## 使用方法
 
