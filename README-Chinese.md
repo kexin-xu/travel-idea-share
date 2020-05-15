@@ -24,8 +24,7 @@ Bootstrap, jQuery
 
 网站的首页。
 
-![index page](localhost_8000_home (1).png)
-
+![index page](https://github.com/Kexin-ya/travel-idea-share/blob/master/localhost_8000_home%20(1).png)
 
 
 #### 2. 所有攻略页面 - All travle idea page
