@@ -54,7 +54,7 @@ Bootstrap, jQuery
 
 "My trip route" 这个位置是用于放置一些地图类的API，底下有评论功能，可以对攻略进行评论和留言。
 
-![detailed idea](detailed-idea.png)
+![detailed idea](_Users_kexinxu_Desktop_group%20project_Travel-model_Idea-info.html (1).png)
 
 
 
