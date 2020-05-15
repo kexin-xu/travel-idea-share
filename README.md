@@ -70,7 +70,7 @@ You can view and manage your ideas.
 
 You can check and manage your orders.
 
-![peesonal-booking-order](peesonal-booking-order-9525058.png)
+![peesonal-booking-order](peesonal-booking-order.png)
 
 
 
